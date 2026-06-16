@@ -548,6 +548,4 @@ export default function EyaPage() {
       </footer>
     </main>
   );
-}/main>
-  );
 }
