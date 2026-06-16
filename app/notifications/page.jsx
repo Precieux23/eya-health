@@ -5,7 +5,9 @@ import axios from "axios";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation"; // ✅ AJOUT
 
-export default function NotificationsPage() {
+import { Suspense } from "react";
+
+function NotificationsContent() {
   const searchParams = useSearchParams(); // ✅ AJOUT
   const returnUrl = searchParams.get("from") || "/dashboard"; // ✅ URL de retour
 
@@ -434,5 +436,20 @@ export default function NotificationsPage() {
         </div>
       </div>
     </div>
+  );
+}
+
+export default function NotificationsPage() {
+  return (
+    <Suspense fallback={
+      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
+        <div className="text-center">
+          <div className="w-16 h-16 border-4 border-blue-600 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+          <p className="text-gray-600 font-semibold">Chargement des notifications...</p>
+        </div>
+      </div>
+    }>
+      <NotificationsContent />
+    </Suspense>
   );
 }
