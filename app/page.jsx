@@ -211,8 +211,13 @@ export default function HomePage() {
         <div className="max-w-6xl mx-auto px-6 relative z-10">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
             <div className="text-center md:text-left">
-              <div className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent mb-2">
-                EYA Health
+              <div className="flex items-baseline gap-1 mb-2">
+                <span className="text-2xl font-black bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent tracking-tighter">
+                  EYA
+                </span>
+                <span className="text-sm font-medium text-slate-400 uppercase tracking-widest">
+                  Health
+                </span>
               </div>
               <p className="text-slate-400 text-sm">
                 Making stockouts history.

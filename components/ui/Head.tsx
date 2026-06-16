@@ -11,16 +11,14 @@ export default function Header() {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="flex items-center gap-2"
+          className="flex items-baseline gap-1"
         >
-          <img
-            src="/chu.jpeg"
-            alt="EYA Health Logo"
-            className="w-10 h-10 rounded-full border border-white shadow"
-          />
-          <h1 className="text-xl font-semibold text-blue-700">
-            EYA Health
-          </h1>
+          <span className="text-2xl sm:text-3xl font-black bg-gradient-to-r from-blue-700 to-indigo-700 bg-clip-text text-transparent tracking-tighter">
+            EYA
+          </span>
+          <span className="text-lg sm:text-xl font-light text-blue-600/80">
+            Health
+          </span>
         </motion.div>
 
         {/* Menu */}
